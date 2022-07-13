@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#container{
+	display: flex;
+	flex-direction: row;
+	column-gap: 12px;
+	height: 79vh;
+	width: 80vw;
+	color:white;
+}
+
+#first{
+	background-image: url("https://scitechdaily.com/images/Sand-Desert.jpg");
+}
+#second{
+	background-image: url("https://images.pexels.com/photos/247600/pexels-photo-247600.jpeg?cs=srgb&dl=pexels-pixabay-247600.jpg&fm=jpg");
+}
+#third{
+	background-image: url("https://oceanpanel.org/wp-content/uploads/2022/06/ocean-under-water-view.jpg");
+}
+#fourth{
+	background-image: url("https://photographylife.com/wp-content/uploads/2015/03/20130523-0169-308-Edit.jpg");
+}
+#fifth{
+	background-image: url("https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg");
+}
+
+.card{
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	transition: width 400ms;
+	text-align: center;
+	flex:0.5;
+	border-radius: 50px;
+	position: relative;
+	transition: flex 0.7s ease-in;
+}
+
+.card h1{
+	position: absolute;
+	bottom:20px;
+	left: 20px;
+	transition: opacity 0.3s ease-in 0.4s;
+	opacity: 0;
+}
+.active{
+	width: 70%;
+	flex:5;
+}
+.active h1{
+	opacity: 1;
+}
+
+
+@media (max-width: 860px){
+	#container :nth-child(4) ,#container :nth-child(5){
+		display: none;
+	}
+}
